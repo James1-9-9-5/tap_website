@@ -36,10 +36,26 @@ main{flex:1;display:flex;flex-direction:column}
 .section{padding:3rem 0}
 
 /* About */
-.hero{padding:5rem 0 4rem;background:var(--navy);color:#fff;flex:1;display:flex;align-items:center}
-.hero .wrap{width:100%}
+.hero{background:var(--navy);color:#fff;flex:1;display:grid;grid-template-columns:minmax(0,40rem) minmax(0,1fr);column-gap:3rem;padding-left:max(1.5rem,calc((100% - 1100px)/2 + 1.5rem));overflow:hidden}
+.hero-text{align-self:center;padding:5rem 0 4rem}
 .hero p{font-size:1.3rem;line-height:1.7;color:#dfe5ee;max-width:62ch;margin:0}
 .hero h1{margin-bottom:.75em}
+
+/* Footage drifting across the area to the right of the text */
+.hero-media{position:relative;overflow:hidden;min-height:320px;background:linear-gradient(135deg,#363b4d 0%,#2b2e3c 70%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%);
+  mask-composite:intersect}
+.clip{position:absolute;inset:0;opacity:0;will-change:transform,opacity;animation:drift 27s linear infinite;animation-delay:calc(var(--i)*9s)}
+.clip video{position:absolute;top:0;left:-15%;width:130%;height:100%;object-fit:cover}
+@keyframes drift{
+  0%{opacity:0;transform:translateX(12%)}
+  15%{opacity:1}
+  28%{opacity:1}
+  43%{opacity:0;transform:translateX(-12%)}
+  100%{opacity:0;transform:translateX(-12%)}
+}
 .btn{display:inline-block;background:var(--green);color:var(--navy);padding:.7rem 1.4rem;border-radius:4px;text-decoration:none;font-weight:600}
 .btn:hover{background:#6dbd60}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
@@ -82,4 +98,9 @@ main{flex:1;display:flex;flex-direction:column}
   .nav a[aria-current="page"]{border-left-color:var(--green)}
   .two-col,.service,.person{grid-template-columns:1fr;gap:1rem}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-left:0}
+  .hero-text{padding:3.5rem 1.5rem 2rem}
+  .hero-media{min-height:260px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 30%);-webkit-mask-composite:source-over;mask-image:linear-gradient(to bottom,transparent 0,#000 30%);mask-composite:add}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.clip{animation:none}.clip:first-child{opacity:.55}}

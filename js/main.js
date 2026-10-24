@@ -16,3 +16,8 @@ if (teamImg) {
   if (teamImg.complete) { teamImg.naturalWidth ? show() : hide(); }
   else { teamImg.addEventListener('load', show); teamImg.addEventListener('error', hide); }
 }
+
+// Footage: stay still if the visitor prefers reduced motion
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.hero-media video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
+}
