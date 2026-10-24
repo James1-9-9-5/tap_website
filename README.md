@@ -6,3 +6,5 @@ Placeholder copy is marked `[Placeholder]` or shown as Name, Title and Responsib
 
 Preview locally: open `index.html`, or run `python3 -m http.server` and visit http://localhost:8000.
 Deploy: push to GitHub, then Settings > Pages > Deploy from branch > `main` / root.
+
+Team photo: upload your photo to the `images` folder named exactly `team.jpeg` (lowercase) and it replaces the placeholder on the Meet the Team page.

@@ -30,8 +30,9 @@ a{color:var(--green-deep)}
 /* Layout */
 main{flex:1;display:flex;flex-direction:column}
 .wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-.page-title{background:var(--green-tint);padding:3.5rem 0 2.5rem;border-bottom:1px solid #d6dfd3}
-.page-title p{color:var(--muted);font-size:1.15rem;margin:0}
+.page-title{background:var(--navy);color:#fff;padding:3.5rem 0 3rem;border-bottom:4px solid var(--green)}
+.page-title h1{color:#fff;margin-bottom:.5em}
+.page-title p{color:#dfe5ee;font-size:1.15rem;line-height:1.7;max-width:70ch;margin:0}
 .section{padding:3rem 0}
 
 /* About */
@@ -44,24 +45,29 @@ main{flex:1;display:flex;flex-direction:column}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 
 /* Services */
-.service{display:grid;grid-template-columns:minmax(180px,1fr) 2fr;gap:2rem;padding:1.75rem 0;border-top:1px solid #d6dfd3}
+.service{display:grid;grid-template-columns:minmax(180px,1fr) 2fr;gap:2rem;padding:1.75rem 0 1.75rem 1.25rem;border-top:1px solid #d6dfd3;border-left:4px solid var(--green)}
 .service:last-child{border-bottom:1px solid #d6dfd3}
-.service h3,.service p{margin:0}
+.service h2{font-size:1.35rem;margin:0;color:var(--navy)}
+.service p{margin:0;max-width:none}
 
 /* Team */
 .team-photo{aspect-ratio:21/9;background:var(--green-tint);border:1px dashed var(--green);display:grid;place-items:center;color:var(--green-deep);text-align:center;padding:1rem;margin-bottom:3rem}
-.team-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.team-photo img{display:none}
+.team-photo.has-photo{aspect-ratio:auto;display:block;padding:0;border:0;background:none}
+.team-photo.has-photo span{display:none}
+.team-photo.has-photo img{display:block;width:100%;max-height:560px;object-fit:cover;object-position:center 30%;border-bottom:4px solid var(--green)}
 .person{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:2rem;padding:1.75rem 0;border-top:1px solid #d6dfd3}
 .person:last-child{border-bottom:1px solid #d6dfd3}
-.person h2{font-size:1.35rem;margin:0}
-.person .title{color:var(--muted);margin:.2rem 0 0}
+.person h2{font-size:1.35rem;margin:0;color:var(--navy)}
+.person .title{color:var(--green-deep);font-weight:600;margin:.2rem 0 0}
 .person ul{margin:0;padding-left:1.2rem}
 .person li{margin-bottom:.35rem}
 
 /* Contact */
 .contact-list{list-style:none;padding:0;margin:0 0 1.5rem}
 .contact-list li{padding:.6rem 0;border-bottom:1px solid #d6dfd3}
-.contact-list strong{display:inline-block;min-width:7rem}
+.contact-list strong{display:inline-block;min-width:7rem;color:var(--navy)}
+.contact-list a{color:var(--green-deep);font-weight:600}
 
 .site-footer{background:var(--navy);color:#b9c4b8;padding:1.5rem 0;font-size:.95rem}
 

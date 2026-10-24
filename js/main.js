@@ -6,3 +6,13 @@ if (toggle && nav) {
     toggle.setAttribute('aria-expanded', open);
   });
 }
+
+// Team photo: show images/team.jpeg when it exists, otherwise keep the placeholder
+const teamImg = document.querySelector('.team-photo img');
+if (teamImg) {
+  const box = teamImg.closest('.team-photo');
+  const show = () => box.classList.add('has-photo');
+  const hide = () => teamImg.remove();
+  if (teamImg.complete) { teamImg.naturalWidth ? show() : hide(); }
+  else { teamImg.addEventListener('load', show); teamImg.addEventListener('error', hide); }
+}
