@@ -25,6 +25,7 @@ if (teamImg) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const FADE = 2000;   // crossfade length in ms
   const DRIFT = 7;     // how far each clip slides, in % of the panel width
+  const SPEED = 1;     // playback speed: 1 = normal, 0.75 = slower, 0.5 = half speed
 
   function whenReady(v) {
     return new Promise(function (resolve) {
@@ -49,8 +50,9 @@ if (teamImg) {
     function show() {
       const clip = list[i];
       const v = clip.querySelector('video');
-      const dur = v.duration * 1000;
+      const dur = v.duration * 1000 / SPEED;   // real time on screen, in ms
       v.currentTime = 0;
+      v.playbackRate = SPEED;
       const started = v.play();
       (started && started.catch ? started.catch(function () {}) : Promise.resolve()).then(function () {
         if (clip._drift) clip._drift.cancel();
@@ -71,7 +73,7 @@ if (teamImg) {
         i = (i + 1) % list.length;
         show();
       }
-      function check() { if (v.currentTime * 1000 >= dur - FADE) next(); }
+      function check() { if ((v.duration - v.currentTime) * 1000 / SPEED <= FADE) next(); }
       v.addEventListener('timeupdate', check);
       v.addEventListener('ended', next);
     }
