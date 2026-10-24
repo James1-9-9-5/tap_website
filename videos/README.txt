@@ -1,7 +1,3 @@
-Put three short looping clips here, named exactly:
-  bc-1.mp4
-  bc-2.mp4
-  bc-3.mp4
-
-Tips: 8-15 seconds each, 1280x720, no audio, under about 5 MB each.
-Use landscape/aerial footage you own or have a licence to use on a website.
+Four short silent clips: bc-1.mp4 to bc-4.mp4 (about 12 seconds, 720p, under 3 MB each).
+Replace any of them with your own, keeping the same file names.
+If you add or remove a clip, tell Claude so the timing is adjusted.
