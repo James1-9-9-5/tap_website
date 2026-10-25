@@ -4,23 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Tapestry Research Group</title>
-  <meta name="description" content="Tapestry Research Group: GIS and asset management with First Nations communities.">
+  <meta name="description" content="Get in touch with Tapestry Research Group to talk about your community's goals.">
+  <link rel="canonical" href="https://tapestry.jamesspooner.org/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tapestry Research Group">
+  <meta property="og:title" content="Contact | Tapestry Research Group">
+  <meta property="og:description" content="Get in touch with Tapestry Research Group to talk about your community's goals.">
+  <meta property="og:url" content="https://tapestry.jamesspooner.org/contact.html">
+  <meta property="og:image" content="https://tapestry.jamesspooner.org/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
   <link rel="icon" href="images/logo.png">
-  <link rel="stylesheet" href="css/style.css?v=6">
-<style>
-.contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;max-width:46rem}
-.contact-card{display:flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid #dde5da;border-top:4px solid var(--green);border-radius:8px;padding:1.75rem;text-decoration:none;color:var(--navy);box-shadow:0 1px 3px rgba(43,46,60,.06);transition:transform .15s,box-shadow .15s}
-.contact-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(43,46,60,.12)}
-.cc-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--green-tint);color:var(--green-deep);margin-bottom:1rem}
-.cc-label{font-size:.9rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.cc-value{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:.25rem 0 1rem;overflow-wrap:anywhere}
-.cc-action{margin-top:auto;font-weight:600;color:var(--green-deep)}
-.contact-note{max-width:46rem;margin:2rem 0 0;color:var(--muted);font-size:1.05rem}
-@media (max-width:640px){.contact-cards{grid-template-columns:1fr}}
-</style>
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
   <header class="site-header">
@@ -30,17 +27,17 @@
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
+        <a href="work.html">Our Work</a>
         <a href="team.html">Meet the Team</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
-      <a class="header-cta" href="contact.html">Contact us</a>
       <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </header>
   <main>
     <section class="page-title"><div class="wrap">
       <h1>Contact</h1>
-      <p>Got a question, an idea, or just want to say hello? Drop us a line below.</p>
+      <p>Always open to a conversation. Reach out.</p>
     </div></section>
     <section class="section"><div class="wrap">
       <h2 class="section-title">Get in touch</h2>
@@ -60,10 +57,50 @@
       </div>
       <p class="contact-note">We work with First Nations communities in British Columbia and across Canada. Whether you have a project in mind or just a question, we would be glad to hear from you.</p>
     </div></section>
+    <section class="section alt"><div class="wrap">
+      <h2 class="section-title">Send us a message</h2>
+      <form class="contact-form" id="contact-form">
+        <div class="field"><label for="cf-name">Your name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="cf-org">Community or organization</label><input id="cf-org" name="org" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="cf-email">Your email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field wide"><label for="cf-msg">How can we help?</label><textarea id="cf-msg" name="msg" rows="6" required></textarea></div>
+        <div class="field wide"><button class="btn" type="submit">Send message</button>
+        <p class="form-note">This opens your email app with the message ready to send. We aim to reply within two business days.</p></div>
+      </form>
+    </div></section>
+    <script>
+      // Change the address here when the real email is known (also update the card above)
+      var CONTACT_EMAIL = "info@example.com";
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var f = e.target;
+        var body = "Name: " + f.name.value + "\nCommunity or organization: " + f.org.value + "\nEmail: " + f.email.value + "\n\n" + f.msg.value;
+        window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Website enquiry from " + f.name.value) + "&body=" + encodeURIComponent(body);
+      });
+    </script>
   </main>
   <footer class="site-footer">
-    <div class="wrap">&copy; Tapestry Research Group</div>
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <strong>Tapestry Research Group</strong>
+        <p>Facilitating Indigenous stewardship, governance and decision-making.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Our Work</a>
+        <a href="data-sovereignty.html">Data Sovereignty</a>
+        <a href="team.html">Meet the Team</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <strong>Get in touch</strong>
+        <a href="tel:+1672123456">+1 (672) 123 456</a>
+        <a href="contact.html">Send us a message</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">&copy; 2026 Tapestry Research Group</div>
   </footer>
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tapestry.jamesspooner.org/sitemap.xml
