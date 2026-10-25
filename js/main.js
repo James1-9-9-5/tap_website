@@ -22,7 +22,7 @@ if (teamImg) {
   const stage = document.querySelector('.hero-media');
   if (!stage) return;
   const clips = Array.from(stage.querySelectorAll('.clip'));
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 900px)').matches;  // still frame on phones and for reduced motion
   const FADE = 2000;   // crossfade length in ms
   const DRIFT = 7;     // how far each clip slides, in % of the panel width
   const SPEED = 1;     // playback speed: 1 = normal, 0.75 = slower, 0.5 = half speed
@@ -40,7 +40,7 @@ if (teamImg) {
   Promise.all(clips.map(function (c) { return whenReady(c.querySelector('video')); })).then(function (ok) {
     const list = clips.filter(function (c, i) { return ok[i]; });
     if (!list.length) return;
-    if (reduce) { list[0].classList.add('active'); return; }
+    if (reduce) { const v0 = list[0].querySelector('video'); v0.preload = 'auto'; try { v0.currentTime = 0.1; } catch (e) {} list[0].classList.add('active'); return; }
     if (list.length === 1) {
       const only = list[0].querySelector('video');
       only.loop = true; only.play().catch(function () {}); list[0].classList.add('active');
