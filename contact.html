@@ -10,6 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
   <link rel="icon" href="images/logo.png">
   <link rel="stylesheet" href="css/style.css?v=4">
+<style>
+.contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;max-width:46rem}
+.contact-card{display:flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid #dde5da;border-top:4px solid var(--green);border-radius:8px;padding:1.75rem;text-decoration:none;color:var(--navy);box-shadow:0 1px 3px rgba(43,46,60,.06);transition:transform .15s,box-shadow .15s}
+.contact-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(43,46,60,.12)}
+.cc-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--green-tint);color:var(--green-deep);margin-bottom:1rem}
+.cc-label{font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cc-value{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:.25rem 0 1rem;overflow-wrap:anywhere}
+.cc-action{margin-top:auto;font-weight:600;color:var(--green-deep)}
+.contact-note{max-width:46rem;margin:2rem 0 0;color:var(--muted);font-size:1.05rem}
+@media (max-width:640px){.contact-cards{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
   <header class="site-header">
@@ -32,12 +43,22 @@
       <p>Always open to a conversation. Reach out.</p>
     </div></section>
     <section class="section"><div class="wrap">
-      <ul class="contact-list">
-        <li><strong>Email</strong> <a href="mailto:info@example.com">info@example.com</a></li>
-        <li><strong>Phone</strong> [Placeholder]</li>
-        <li><strong>Location</strong> [Placeholder]</li>
-      </ul>
-      <a class="btn" href="mailto:info@example.com">Send an email</a>
+      <h2 class="section-title">Get in touch</h2>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:info@example.com">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6.5L20.5 7"/></svg></span>
+          <span class="cc-label">Email</span>
+          <span class="cc-value">info@example.com</span>
+          <span class="cc-action">Send an email &rarr;</span>
+        </a>
+        <a class="contact-card" href="tel:+1672123456">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <span class="cc-label">Phone</span>
+          <span class="cc-value">+1 (672) 123 456</span>
+          <span class="cc-action">Call us &rarr;</span>
+        </a>
+      </div>
+      <p class="contact-note">We work with First Nations communities in British Columbia and across Canada. Whether you have a project in mind or just a question, we would be glad to hear from you.</p>
     </div></section>
   </main>
   <footer class="site-footer">
