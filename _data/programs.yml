@@ -1,0 +1,28 @@
+# The four program areas ("What We Do"). Edit the wording here and it updates on Home and Services.
+- id: strategy
+  title: Strategy
+  icon: images/services/strategy.svg
+  short: Setting direction and acting on it, from land and marine use planning to policy and economic development.
+  body: We support Nations in setting direction and acting on it, from land and marine use planning and climate adaptation to policy, referrals, economic development, and project management.
+  deliverables: Land and marine use plans, climate adaptation plans, policy documents, referral processes, and economic development plans.
+
+- id: information-management
+  title: Information Management
+  icon: images/services/information-management.svg
+  short: Looking after your information across its full life cycle, grounded in Indigenous data sovereignty.
+  body: We help communities look after their information across its full life cycle, with systems, governance, and long-term safeguarding grounded in Indigenous data sovereignty.
+  deliverables: Information management systems, data governance frameworks, and long-term safeguarding of your data.
+
+- id: geospatial-mapping
+  title: Geospatial Analysis and Mapping
+  icon: images/services/geospatial-mapping.svg
+  short: Technical analysis paired with visual storytelling, from whole territories down to individual sites.
+  body: We pair technical analysis with visual storytelling, from whole territories and watersheds down to individual sites, producing atlases, cultural maps, custom map products, and GIS-based asset management systems.
+  deliverables: Territorial and bioregional atlases, cultural maps, custom map products, and GIS-based asset management systems.
+
+- id: content-design
+  title: Content, Writing, and Design
+  icon: images/services/content-design.svg
+  short: Turning knowledge into clear, accessible material that reflects community values.
+  body: We turn knowledge into clear, accessible material that reflects community values, including atlas narratives, funding proposals, reports, and planning documents. We follow each community&rsquo;s own data governance protocols, as well as recognized principles such as OCAP&reg;.
+  deliverables: Atlas narratives, funding proposals, reports, and planning documents.

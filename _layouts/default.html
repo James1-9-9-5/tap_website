@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if page.nav == "home" %}
+  {%- assign full_title = site.title | append: " | " | append: page.title %}
+  {%- else %}
+  {%- assign full_title = page.title | append: " | " | append: site.title %}
+  {%- endif %}
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ site.url }}/{{ page.url | remove_first: '/' | remove: 'index.html' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ site.url }}/{{ page.url | remove_first: '/' | remove: 'index.html' }}">
+  <meta property="og:image" content="{{ site.url }}/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+  {% include header.html %}
+  <main id="main">
+    {%- if page.banner %}
+    <section class="page-title" style="background-image:url('{{ page.banner }}')">
+      <div class="wrap">
+        <p class="eyebrow">{{ page.eyebrow }}</p>
+        <h1>{{ page.heading | default: page.title }}</h1>
+        {%- if page.intro %}<p class="lede">{{ page.intro }}</p>{% endif %}
+      </div>
+    </section>
+    {%- endif %}
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="js/main.js?v=8"></script>
+</body>
+</html>

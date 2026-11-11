@@ -1,0 +1,19 @@
+# Site settings. GitHub Pages builds this site with Jekyll automatically.
+title: Tapestry Research Group
+tagline: Helping Indigenous communities plan, map, and manage their lands, assets, and information.
+url: https://tapestry.jamesspooner.org
+phone: "+1 (672) 123 456"
+phone_link: "+1672123456"
+email: info@example.com   # change here once the real address is known; every page picks it up
+
+# Tabs along the top, in order
+nav:
+  - { key: home,     title: Home,     url: index.html }
+  - { key: about,    title: About Us, url: about.html }
+  - { key: services, title: Services, url: services.html }
+  - { key: contact,  title: Contact,  url: contact.html }
+
+exclude:
+  - README.md
+  - videos/README.txt
+  - images/services/*.png

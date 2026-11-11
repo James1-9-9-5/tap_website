@@ -1,0 +1,37 @@
+# Individual services, in the order shown. "program" must match an id in programs.yml.
+- title: Proposal support
+  icon: proposal
+  program: content-design
+  text: Help shaping and writing funding proposals, from the first idea to a submission-ready application.
+- title: Map design
+  icon: map
+  program: geospatial-mapping
+  text: Maps designed to your brief, for the band office wall, reports, presentations, and funding applications.
+- title: Field to dashboard
+  icon: field-dashboard
+  program: information-management
+  text: Mobile data collection apps feeding live, web-based dashboards, so field work is visible as soon as it is done.
+- title: Research
+  icon: research
+  program: strategy
+  text: Qualitative and quantitative methods, from gathering community input to statistical analysis.
+- title: Web and print
+  icon: web-print
+  program: content-design
+  text: Websites, interactive maps, and print-ready publications.
+- title: GIS and spatial analysis
+  icon: gis
+  program: geospatial-mapping
+  text: Spatial analysis and mapping across all components of the Esri ArcGIS suite.
+- title: Data integration
+  icon: integration
+  program: information-management
+  text: Combining field-collected, LiDAR, and public datasets into one trusted source.
+- title: LiDAR and 3D
+  icon: lidar
+  program: geospatial-mapping
+  text: Point cloud processing and 3D modelling of landscapes and infrastructure.
+- title: Automation
+  icon: automation
+  program: information-management
+  text: Workflows that keep your data clean, current, and repeatable, with less staff time.

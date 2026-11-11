@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand brand-footer" href="index.html"><img src="images/logo.png" alt="" width="36" height="36"><span>Tapestry Research Group</span></a>
+      <p>{{ site.tagline }}</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <strong>Explore</strong>
+      {%- for item in site.nav %}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      {%- endfor %}
+      <a href="about.html#data-sovereignty">Data sovereignty</a>
+    </nav>
+    <div class="footer-contact">
+      <strong>Get in touch</strong>
+      <a href="mailto:{{ site.email }}">{% include icons/mail.svg %}{{ site.email }}</a>
+      <a href="tel:{{ site.phone_link }}">{% include icons/phone.svg %}{{ site.phone }}</a>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>&copy; {{ site.time | date: "%Y" }} Tapestry Research Group</span>
+    <span>Working with Indigenous communities in British Columbia and across Canada</span>
+  </div>
+</footer>

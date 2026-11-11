@@ -1,107 +1,73 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us | Tapestry Research Group</title>
-  <meta name="description" content="Tapestry is a values driven team with over 25 years of experience supporting Indigenous communities, grounded in humility, respect and weaving together ways of knowing.">
-  <link rel="canonical" href="https://tapestry.jamesspooner.org/about.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Tapestry Research Group">
-  <meta property="og:title" content="About Us | Tapestry Research Group">
-  <meta property="og:description" content="Tapestry is a values driven team with over 25 years of experience supporting Indigenous communities, grounded in humility, respect and weaving together ways of knowing.">
-  <meta property="og:url" content="https://tapestry.jamesspooner.org/about.html">
-  <meta property="og:image" content="https://tapestry.jamesspooner.org/images/og.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/logo.png">
-  <link rel="stylesheet" href="css/style.css?v=7">
-<style>.program{display:flex;flex-direction:column;align-items:center;text-align:center}.program span{font-size:1.05rem;white-space:nowrap}@media (max-width:520px){.program span{white-space:normal}}</style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="44" height="44"><span>Tapestry Research Group</span></a>
-      <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="about.html" aria-current="page">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
+---
+layout: default
+nav: about
+title: About Us
+description: Tapestry Research Group is a values-driven, interdisciplinary team with over 25 years of experience supporting Indigenous communities in British Columbia and across Canada.
+banner: images/photos/inlet.jpg
+eyebrow: About us
+heading: Who we are
+intro: A values-driven team of interdisciplinary professionals with over 25 years of experience supporting Indigenous communities in British Columbia and across Canada.
+---
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2 class="section-title">Supporting communities to lead</h2>
+      <p class="big">Tapestry Research Group helps Indigenous communities plan, map, and manage their lands, assets, and information.</p>
+      <p>Our work is grounded in humility and respect. We weave together complementary ways of knowing, so that the tools and plans we build reflect each community&rsquo;s own priorities and decision-making.</p>
+      <p><a class="more" href="services.html">See what we do {% include icons/arrow.svg %}</a></p>
     </div>
-  </header>
-  <main>
-    <section class="page-title"><div class="wrap">
-      <h1>About Us</h1>
-      <p>Tapestry is a values driven organization made up of a team of interdisciplinary professionals committed to facilitating Indigenous stewardship, governance and decision-making. With over 25 years of experience supporting Indigenous communities in British Columbia and across Canada, our work is grounded in humility, respect, and a dedication to weaving together complementary ways of knowing.</p>
-    </div></section>
+    <figure class="split-photo">
+      <img src="images/photos/sunset.jpg" alt="Forested inlet on the BC coast at sunset" loading="lazy" width="1600" height="900">
+    </figure>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="wrap about-row">
-        <h2>How we work</h2>
-        <ul class="how">
-          <li>Participatory community engagement shapes every project.</li>
-          <li>We strengthen Indigenous governance by developing robust information management systems and decision-making frameworks.</li>
-          <li>We use technology to enable territorial and community planning and capacity building.</li>
-        </ul>
-      </div>
-    </section>
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our values</p>
+      <h2 class="section-title">What guides our work</h2>
+    </div>
+    <div class="icon-grid three">
+      <div class="icon-card"><span class="icon-badge">{% include icons/listen.svg %}</span><h3>Humility</h3><p>We listen first, and let each community&rsquo;s priorities guide the work.</p></div>
+      <div class="icon-card"><span class="icon-badge">{% include icons/people.svg %}</span><h3>Respect</h3><p>We respect Indigenous governance and support communities in making their own decisions.</p></div>
+      <div class="icon-card"><span class="icon-badge">{% include icons/weave.svg %}</span><h3>Weaving ways of knowing</h3><p>We bring Indigenous knowledge and technical expertise together so that each strengthens the other.</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Draft wording below (values descriptions): edit freely -->
-    <section class="section alt">
-      <div class="wrap">
-        <h2 class="section-title">What guides our work</h2>
-        <div class="values-grid">
-          <div class="value"><h3>Humility</h3><p>We listen first, and let each community&rsquo;s priorities guide the work.</p></div>
-          <div class="value"><h3>Respect</h3><p>We respect Indigenous governance and <a href="data-sovereignty.html">data sovereignty</a>, and support communities in making their own decisions.</p></div>
-          <div class="value"><h3>Weaving together ways of knowing</h3><p>We bring Indigenous knowledge and technical expertise together so that each strengthens the other.</p></div>
-        </div>
-      </div>
-    </section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our approach</p>
+      <h2 class="section-title">How an engagement works</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Listen and scope</h3><p>We begin by learning your community&rsquo;s priorities, existing systems, and capacity, and agree together on goals and on who leads.</p></li>
+      <li><h3>Plan together</h3><p>We co-design the approach with your team, including how information will be gathered, held, and shared.</p></li>
+      <li><h3>Build and deliver</h3><p>We carry out the work, whether maps, systems, plans, or reports, with regular check-ins along the way.</p></li>
+      <li><h3>Hand over and support</h3><p>We document what we build, train your staff, and leave your community able to carry the work forward.</p></li>
+    </ol>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="wrap">
-        <h2 class="section-title">Our program areas</h2>
-        <div class="program-grid">
-        <a class="program" href="services.html"><img src="images/services/strategy.svg" alt="" width="88" height="88"><span>Strategy</span></a>
-        <a class="program" href="services.html"><img src="images/services/information-management.svg" alt="" width="88" height="88"><span>Information Management</span></a>
-        <a class="program" href="services.html"><img src="images/services/geospatial-mapping.svg" alt="" width="88" height="88"><span>Geospatial Analysis and Mapping</span></a>
-        <a class="program" href="services.html"><img src="images/services/content-design.svg" alt="" width="88" height="88"><span>Content, Writing, and Design</span></a>
-        </div>
-        <p class="more-row"><a class="more" href="services.html">See all services</a></p>
+<section class="section sovereignty" id="data-sovereignty">
+  <div class="wrap">
+    <div class="sov-grid">
+      <div class="sov-intro">
+        <p class="eyebrow eyebrow-light">Data sovereignty</p>
+        <h2 class="section-title">Your information, your rules</h2>
+        <p>Indigenous data sovereignty is at the root of how we manage information. As data custodians, we work on behalf of communities, never in place of them.</p>
+        <p>We follow each community&rsquo;s own data governance protocols, as well as recognized principles such as OCAP&reg; (Ownership, Control, Access, and Possession).</p>
       </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="wrap">
-        <h2>Want to talk about your community&rsquo;s goals?</h2>
-        <a class="btn btn-dark" href="contact.html">Contact us</a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-about">
-        <strong>Tapestry Research Group</strong>
-        <p>Facilitating Indigenous stewardship, governance and decision-making.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="data-sovereignty.html">Data Sovereignty</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="footer-contact">
-        <strong>Get in touch</strong>
-        <a href="tel:+1672123456">+1 (672) 123 456</a>
-        <a href="contact.html">Send us a message</a>
+      <div class="icon-grid two">
+        <div class="icon-card dark"><span class="icon-badge">{% include icons/key.svg %}</span><h3>Your data stays yours</h3><p>Communities own the information about their people, lands, and culture. We act as custodians, not owners.</p></div>
+        <div class="icon-card dark"><span class="icon-badge">{% include icons/checklist.svg %}</span><h3>Your protocols govern it</h3><p>Access, storage, and sharing follow your community&rsquo;s own protocols and decisions.</p></div>
+        <div class="icon-card dark"><span class="icon-badge">{% include icons/agreement.svg %}</span><h3>Clear agreements</h3><p>How information is collected, used, and held is agreed up front, so everyone knows where they stand.</p></div>
+        <div class="icon-card dark"><span class="icon-badge">{% include icons/shield.svg %}</span><h3>Safeguarded for the future</h3><p>We keep data secure and usable for generations, and hand everything over at the end of an engagement.</p></div>
       </div>
     </div>
-    <div class="wrap footer-base">&copy; 2026 Tapestry Research Group</div>
-  </footer>
-  <script src="js/main.js?v=7"></script>
-</body>
-</html>
+  </div>
+</section>
+
+{% include cta.html %}

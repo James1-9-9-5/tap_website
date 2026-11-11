@@ -7,16 +7,6 @@ if (toggle && nav) {
   });
 }
 
-// Team photo: show images/team.jpeg when it exists, otherwise keep the placeholder
-const teamImg = document.querySelector('.team-photo img');
-if (teamImg) {
-  const box = teamImg.closest('.team-photo');
-  const show = () => box.classList.add('has-photo');
-  const hide = () => teamImg.remove();
-  if (teamImg.complete) { teamImg.naturalWidth ? show() : hide(); }
-  else { teamImg.addEventListener('load', show); teamImg.addEventListener('error', hide); }
-}
-
 // Footage: play each clip once from its start, crossfading into the next
 (function () {
   const stage = document.querySelector('.hero-media');
@@ -78,5 +68,33 @@ if (teamImg) {
       v.addEventListener('ended', next);
     }
     show();
+  });
+})();
+
+// Contact form: opens the visitor's email app with the message filled in.
+// The address comes from "email" in _config.yml.
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const f = e.target;
+    const topic = f.topic && f.topic.value ? f.topic.value : 'Website enquiry';
+    const body = 'Name: ' + f.name.value + '\nCommunity or organization: ' + f.org.value + '\nEmail: ' + f.email.value + '\n\n' + f.msg.value;
+    window.location.href = 'mailto:' + form.dataset.email + '?subject=' + encodeURIComponent(topic + ' from ' + f.name.value) + '&body=' + encodeURIComponent(body);
+  });
+})();
+
+// Gentle fade-up for cards as they scroll into view
+(function () {
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const items = document.querySelectorAll('.program-card, .icon-card, .steps li, .service-card, .program-row, .service-chips li');
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  items.forEach(function (el, i) {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (i % 4) * 70 + 'ms';
+    io.observe(el);
   });
 })();
