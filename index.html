@@ -43,7 +43,7 @@ description: Tapestry Research Group helps Indigenous communities in British Col
     <div class="program-cards">
       {%- for p in site.data.programs %}
       <a class="program-card" href="services.html#{{ p.id }}">
-        <img src="{{ p.icon }}" alt="" width="84" height="84">
+        <span class="program-badge">{% include icons/program-{{ p.id }}.svg %}</span>
         <h3>{{ p.title }}</h3>
         <p>{{ p.short }}</p>
         <span class="more">Learn more {% include icons/arrow.svg %}</span>

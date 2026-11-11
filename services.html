@@ -15,7 +15,7 @@ intro: Our work spans four interwoven program areas. Within them, we offer speci
     </nav>
     {%- for p in site.data.programs %}
     <article class="program-row" id="{{ p.id }}">
-      <img class="program-icon" src="{{ p.icon }}" alt="" width="112" height="112">
+      <span class="program-badge lg">{% include icons/program-{{ p.id }}.svg %}</span>
       <div class="program-body">
         <h2>{{ p.title }}</h2>
         <p>{{ p.body }}</p>

@@ -69,8 +69,8 @@ main{flex:1;display:flex;flex-direction:column}
 .page-title .eyebrow{color:#a8d79e}
 
 /* Home hero with footage */
-.hero{position:relative;background:var(--navy);color:#fff;flex:none;min-height:min(84vh,700px);display:flex;align-items:center;overflow:hidden}
-.hero-text{position:relative;z-index:3;width:100%;max-width:1160px;margin:0 auto;padding:5rem 1.5rem 4.5rem}
+.hero{position:relative;background:var(--navy);color:#fff;flex:none;min-height:min(64vh,540px);display:flex;align-items:center;overflow:hidden}
+.hero-text{position:relative;z-index:3;width:100%;max-width:1160px;margin:0 auto;padding:3.75rem 1.5rem 3.5rem}
 .hero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.3rem);margin-bottom:.55em;max-width:19em;text-shadow:0 1px 14px rgba(20,22,32,.4)}
 .hero p{font-size:1.28rem;line-height:1.7;color:#e3e8ee;max-width:56ch;margin:0;text-shadow:0 1px 12px rgba(20,22,32,.4)}
 .hero .eyebrow{text-shadow:none}
@@ -96,7 +96,12 @@ main{flex:1;display:flex;flex-direction:column}
 .program-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--green);transform:scaleX(.25);transform-origin:left;transition:transform .25s}
 .program-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:#cfe0ca}
 .program-card:hover::before{transform:scaleX(1)}
-.program-card img{width:84px;height:84px;margin-bottom:1rem}
+.program-badge{--badge:#f1f7ef;display:grid;place-items:center;width:84px;height:84px;margin-bottom:1.2rem;border-radius:20px;background:var(--badge);border:1px solid #d3e5cc;box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(43,46,60,.05),0 8px 18px -6px rgba(53,122,45,.22);transition:transform .25s,box-shadow .25s,border-color .25s}
+.picon{width:58px;height:58px;display:block;transition:transform .25s}
+.program-card:hover .program-badge{border-color:var(--green);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(43,46,60,.06),0 14px 26px -8px rgba(53,122,45,.35)}
+.program-card:hover .picon{transform:scale(1.07) rotate(-2deg)}
+.program-badge.lg{width:108px;height:108px;border-radius:26px;margin:0}
+.program-badge.lg .picon{width:76px;height:76px}
 .program-card h3{font-size:1.2rem;margin-bottom:.45rem}
 .program-card p{color:var(--navy-soft);font-size:1rem;line-height:1.55;margin:0 0 1.1rem}
 .program-card .more{margin-top:auto}
@@ -152,7 +157,7 @@ main{flex:1;display:flex;flex-direction:column}
 .jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
 .jump a{padding:.45rem .95rem;border:1px solid #cdd8ca;border-radius:999px;background:#fff;color:var(--navy);text-decoration:none;font-weight:600;font-size:.98rem}
 .jump a:hover{background:var(--green-mist);border-color:var(--green)}
-.program-row{display:grid;grid-template-columns:112px 1fr;gap:2rem;align-items:start;padding:2.25rem 0;border-top:1px solid #d6dfd3}
+.program-row{display:grid;grid-template-columns:108px 1fr;gap:2rem;align-items:start;padding:2.25rem 0;border-top:1px solid #d6dfd3}
 .program-row:last-child{border-bottom:1px solid #d6dfd3}
 .program-icon{width:112px;height:112px;display:block}
 .program-body h2{font-size:1.6rem;margin-bottom:.5rem}
@@ -200,8 +205,9 @@ main{flex:1;display:flex;flex-direction:column}
 /* Footer */
 .site-footer{background:var(--navy);color:#b9c4b8;padding:3.25rem 0 1.5rem;font-size:1rem}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding-bottom:2rem}
-.brand-footer{color:#fff;font-size:1.2rem;margin-bottom:.8rem}
-.brand-footer img{width:36px;height:36px;background:#fff;border-radius:8px;padding:3px}
+.brand-footer{display:inline-flex;color:var(--navy);background:#fff;font-size:1.15rem;margin-bottom:1rem;padding:.45rem 1rem .45rem .5rem;border-radius:10px;gap:.6rem}
+.brand-footer img{width:34px;height:34px}
+.site-footer a.brand-footer,.site-footer a.brand-footer:hover{color:var(--navy);text-decoration:none}
 .site-footer strong{display:block;color:#fff;font-family:var(--serif);font-size:1.1rem;margin-bottom:.6rem}
 .site-footer p{margin:0;max-width:34ch;line-height:1.55}
 .site-footer a{color:#dfe5ee;text-decoration:none}
@@ -244,7 +250,8 @@ main{flex:1;display:flex;flex-direction:column}
 @media (max-width:640px){
   .program-cards,.service-grid,.icon-grid.two,.steps,.service-chips,.contact-form{grid-template-columns:1fr}
   .program-row{grid-template-columns:1fr;gap:1rem}
-  .program-icon{width:84px;height:84px}
+  .program-badge.lg{width:84px;height:84px;border-radius:20px}
+  .program-badge.lg .picon{width:58px;height:58px}
   .footer-grid{grid-template-columns:1fr}
   .form-panel{padding:1.4rem}
   .brand{font-size:1.1rem;gap:.5rem}
